@@ -1,0 +1,4 @@
+SyncAdapterTest
+===============
+
+Test of SyncAdapter
