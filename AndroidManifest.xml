@@ -5,12 +5,17 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="14"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name="LogActivity"
+        <activity android:name=".ui.activity.LogActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".contentprovider.LogProvider"
+            android:authorities="com.kvest.sync_adapter_test.contentprovider.LogProvider"
+            android:exported="false" />
     </application>
 </manifest>
