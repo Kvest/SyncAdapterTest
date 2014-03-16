@@ -3,7 +3,7 @@ package com.kvest.sync_adapter_test.sync;
 import android.accounts.Account;
 import android.content.*;
 import android.os.Bundle;
-import android.util.Log;
+import com.kvest.sync_adapter_test.utility.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,7 +35,6 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     public void onPerformSync(Account account, Bundle extras,
                               String authority, ContentProviderClient providerClient,
                               SyncResult syncResult) {
-        //TODO
-        Log.d("Kvest", "!!!!!!!!!!!!!!!!!!!!");
+        Logger.addLog(getContext(), "onPerformSync is called[" + (extras != null ? extras.toString() : "") + "]");
     }
 }
